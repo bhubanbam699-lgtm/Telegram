@@ -352,6 +352,7 @@ public class ContactsActivity extends BaseFragment implements FactorAnimator.Tar
         ActionBarMenu menu = actionBar.createMenu();
 
         searchItem = menu.addItem(search_button, R.drawable.outline_header_search);
+        if (searchItem != null) searchItem.setVisibility(View.GONE);
         searchItem.setContentDescription(getString(R.string.SearchContacts));
 
         searchField.editText.addTextChangedListener(new SearchTextWatcher(searchField.editText, new ActionBarMenuItem.ActionBarMenuItemSearchListener() {
